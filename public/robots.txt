@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Beauty Studio Bur Dubai - Shobha Beauty Studio & Nails
+# Nail Studio Meena Bazaar - Hair Straightening, Blow Dry, Mehendi, Press-on Nails
+
+Sitemap: https://www.shobhabeautystudio.com/sitemap.xml
+
+# SEO Keywords: Beauty Studio Bur Dubai, Nail Studio Meena Bazaar
+# Location: Meena Bazaar, Bur Dubai, UAE
+# Services: Hair, Makeup, Nails, Facial, Waxing, Threading, Bridal
+# Specialty: Hair Straightening, Blow Dry, Mehendi, Press-on Nails
