@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --gold: #C6A664;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+  }
+}
+
+@layer components {
+  .gold {
+    color: var(--gold);
+  }
+  
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  
+  .border-gold {
+    border-color: var(--gold);
+  }
+  
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .btn-primary {
+    @apply bg-gold text-black px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-yellow-500 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-gold text-gold px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-gold hover:text-black;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-2;
+  }
+
+  .lazy-image {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+
+  .lazy-image.loaded {
+    @apply opacity-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-gold {
+    background: linear-gradient(135deg, var(--gold), #D4B570);
+  }
+  
+  .shadow-gold {
+    box-shadow: 0 10px 25px -3px rgba(198, 166, 100, 0.3), 0 4px 6px -2px rgba(198, 166, 100, 0.2);
+  }
+
+  /* Mobile bottom padding for sticky bar */
+  @media (max-width: 768px) {
+    .pb-mobile {
+      padding-bottom: 80px;
+    }
+  }
+}
+
+/* Loading animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8945A;
+}
